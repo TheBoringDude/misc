@@ -40,29 +40,32 @@ class WatchAsian:
         dl_link = ""
         quality = ""
 
-        for i in links:
-            if "720p" in i.values():
-                dl_link = i['file']
-                quality = "720p"
-                return dl_link, quality
+        try:
+            for i in links:
+                if "720p" in i.values():
+                    dl_link = i['file']
+                    quality = "720p"
+                    return dl_link, quality
 
-        for i in links:
-            if "1080p" in i.values():
-                dl_link = i['file']
-                quality = "1080p"
-                return dl_link, quality
+            for i in links:
+                if "1080p" in i.values():
+                    dl_link = i['file']
+                    quality = "1080p"
+                    return dl_link, quality
 
-        for i in links:
-            if "480p" in i.values():
-                dl_link = i['file']
-                quality = "480p"
-                return dl_link, quality
+            for i in links:
+                if "480p" in i.values():
+                    dl_link = i['file']
+                    quality = "480p"
+                    return dl_link, quality
 
-        for i in links:
-            if "360p" in i.values():
-                dl_link = i['file']
-                quality = "360p"
-                return dl_link, quality
+            for i in links:
+                if "360p" in i.values():
+                    dl_link = i['file']
+                    quality = "360p"
+                    return dl_link, quality
+        except Exception:
+            return links, None
 
 
 if __name__ == "__main__":
@@ -76,6 +79,8 @@ if __name__ == "__main__":
     for num, i in enumerate(download.get_eps()):
         print("    Downloading Episode ", num + 1)
         link = WatchAsian.get_gcloud(WatchAsian.get_embed(i))
+
         download_link, quality = WatchAsian.Download(link)
         print("\t=>", link, quality, "\n")
-        os.system('idman /n /a /d "' + download_link + '" /f "EP - ' + str(num+1) + '. ' + title + '.mp4"')
+        if quality is not None:
+            os.system('idman /n /a /d "' + download_link + '" /f "EP - ' + str(num+1) + '. ' + title + '.mp4"')
