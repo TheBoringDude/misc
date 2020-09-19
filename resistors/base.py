@@ -3,16 +3,13 @@
 ################################################################################
 ## Form generated from reading UI file 'design.ui'
 ##
-## Created by: Qt User Interface Compiler version 5.15.0
+## Created by: Qt User Interface Compiler version 5.15.1
 ##
 ## WARNING! All changes made in this file will be lost when recompiling UI file!
 ################################################################################
 
-from PySide2.QtCore import (QCoreApplication, QDate, QDateTime, QMetaObject,
-    QObject, QPoint, QRect, QSize, QTime, QUrl, Qt)
-from PySide2.QtGui import (QBrush, QColor, QConicalGradient, QCursor, QFont,
-    QFontDatabase, QIcon, QKeySequence, QLinearGradient, QPalette, QPainter,
-    QPixmap, QRadialGradient)
+from PySide2.QtCore import *
+from PySide2.QtGui import *
 from PySide2.QtWidgets import *
 
 
@@ -20,7 +17,7 @@ class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         if not MainWindow.objectName():
             MainWindow.setObjectName(u"MainWindow")
-        MainWindow.resize(421, 537)
+        MainWindow.resize(421, 597)
         icon = QIcon()
         icon.addFile(u"icon.png", QSize(), QIcon.Normal, QIcon.Off)
         MainWindow.setWindowIcon(icon)
@@ -123,7 +120,7 @@ class Ui_MainWindow(object):
         self.label_6.setFont(font3)
         self.groupBox = QGroupBox(self.centralwidget)
         self.groupBox.setObjectName(u"groupBox")
-        self.groupBox.setGeometry(QRect(60, 280, 301, 61))
+        self.groupBox.setGeometry(QRect(60, 350, 301, 61))
         self.groupBox.setFont(font)
         self.groupBox.setStyleSheet(u"background-color: rgb(255, 255, 255);")
         self.lblCodedVal = QLabel(self.groupBox)
@@ -138,7 +135,7 @@ class Ui_MainWindow(object):
         self.lblCodedVal.setAlignment(Qt.AlignCenter)
         self.groupBox_2 = QGroupBox(self.centralwidget)
         self.groupBox_2.setObjectName(u"groupBox_2")
-        self.groupBox_2.setGeometry(QRect(60, 360, 301, 161))
+        self.groupBox_2.setGeometry(QRect(60, 430, 301, 161))
         self.groupBox_2.setFont(font)
         self.groupBox_2.setStyleSheet(u"background-color: rgb(255, 255, 255);")
         self.lblToleranceVal = QLabel(self.groupBox_2)
@@ -184,6 +181,26 @@ class Ui_MainWindow(object):
         self.btnSolve.setCursor(QCursor(Qt.PointingHandCursor))
         self.btnSolve.setStyleSheet(u"color: rgb(255, 255, 255);\n"
 "background-color: rgb(0, 170, 0);")
+        self.groupBox_3 = QGroupBox(self.centralwidget)
+        self.groupBox_3.setObjectName(u"groupBox_3")
+        self.groupBox_3.setGeometry(QRect(60, 280, 141, 61))
+        self.groupBox_3.setFont(font)
+        self.groupBox_3.setStyleSheet(u"background-color: rgb(255, 255, 255);")
+        self.lblMultiplier = QLabel(self.groupBox_3)
+        self.lblMultiplier.setObjectName(u"lblMultiplier")
+        self.lblMultiplier.setGeometry(QRect(10, 22, 121, 31))
+        self.lblMultiplier.setFont(font7)
+        self.lblMultiplier.setAlignment(Qt.AlignCenter)
+        self.groupBox_4 = QGroupBox(self.centralwidget)
+        self.groupBox_4.setObjectName(u"groupBox_4")
+        self.groupBox_4.setGeometry(QRect(220, 280, 141, 61))
+        self.groupBox_4.setFont(font)
+        self.groupBox_4.setStyleSheet(u"background-color: rgb(255, 255, 255);")
+        self.lblTolerance = QLabel(self.groupBox_4)
+        self.lblTolerance.setObjectName(u"lblTolerance")
+        self.lblTolerance.setGeometry(QRect(10, 22, 121, 31))
+        self.lblTolerance.setFont(font7)
+        self.lblTolerance.setAlignment(Qt.AlignCenter)
         MainWindow.setCentralWidget(self.centralwidget)
 
         self.retranslateUi(MainWindow)
@@ -204,7 +221,7 @@ class Ui_MainWindow(object):
         self.cbABand.setItemText(8, QCoreApplication.translate("MainWindow", u"Gray", None))
         self.cbABand.setItemText(9, QCoreApplication.translate("MainWindow", u"White", None))
 
-        self.cbABand.setPlaceholderText(QCoreApplication.translate("MainWindow", u"Color of the A-Band", None))
+        self.cbABand.setProperty("placeholderText", QCoreApplication.translate("MainWindow", u"Color of the A-Band", None))
         self.label.setText(QCoreApplication.translate("MainWindow", u"Decoding Carbon Resistors", None))
         self.label_2.setText(QCoreApplication.translate("MainWindow", u"4 - Band", None))
         self.label_3.setText(QCoreApplication.translate("MainWindow", u"A - Band", None))
@@ -220,7 +237,7 @@ class Ui_MainWindow(object):
         self.cbBBand.setItemText(8, QCoreApplication.translate("MainWindow", u"Gray", None))
         self.cbBBand.setItemText(9, QCoreApplication.translate("MainWindow", u"White", None))
 
-        self.cbBBand.setPlaceholderText(QCoreApplication.translate("MainWindow", u"Color of the B-Band", None))
+        self.cbBBand.setProperty("placeholderText", QCoreApplication.translate("MainWindow", u"Color of the B-Band", None))
         self.label_5.setText(QCoreApplication.translate("MainWindow", u"C - Band", None))
         self.cbMultiplier.setItemText(0, QCoreApplication.translate("MainWindow", u"Black", None))
         self.cbMultiplier.setItemText(1, QCoreApplication.translate("MainWindow", u"Brown", None))
@@ -235,7 +252,7 @@ class Ui_MainWindow(object):
         self.cbMultiplier.setItemText(10, QCoreApplication.translate("MainWindow", u"Gold", None))
         self.cbMultiplier.setItemText(11, QCoreApplication.translate("MainWindow", u"Silver", None))
 
-        self.cbMultiplier.setPlaceholderText(QCoreApplication.translate("MainWindow", u"Multiplier", None))
+        self.cbMultiplier.setProperty("placeholderText", QCoreApplication.translate("MainWindow", u"Multiplier", None))
         self.cbTolerance.setItemText(0, QCoreApplication.translate("MainWindow", u"Brown", None))
         self.cbTolerance.setItemText(1, QCoreApplication.translate("MainWindow", u"Red", None))
         self.cbTolerance.setItemText(2, QCoreApplication.translate("MainWindow", u"Orange", None))
@@ -244,7 +261,7 @@ class Ui_MainWindow(object):
         self.cbTolerance.setItemText(5, QCoreApplication.translate("MainWindow", u"Silver", None))
         self.cbTolerance.setItemText(6, QCoreApplication.translate("MainWindow", u"None", None))
 
-        self.cbTolerance.setPlaceholderText(QCoreApplication.translate("MainWindow", u"Tolerance", None))
+        self.cbTolerance.setProperty("placeholderText", QCoreApplication.translate("MainWindow", u"Tolerance", None))
         self.label_6.setText(QCoreApplication.translate("MainWindow", u"D - Band", None))
         self.groupBox.setTitle(QCoreApplication.translate("MainWindow", u"Coded Value", None))
         self.lblCodedVal.setText(QCoreApplication.translate("MainWindow", u"...", None))
@@ -255,5 +272,9 @@ class Ui_MainWindow(object):
         self.lblMinTolerance.setText(QCoreApplication.translate("MainWindow", u"...", None))
         self.label_8.setText(QCoreApplication.translate("MainWindow", u"Minimum:", None))
         self.btnSolve.setText(QCoreApplication.translate("MainWindow", u"SOLVE", None))
+        self.groupBox_3.setTitle(QCoreApplication.translate("MainWindow", u"Multiplier", None))
+        self.lblMultiplier.setText(QCoreApplication.translate("MainWindow", u"...", None))
+        self.groupBox_4.setTitle(QCoreApplication.translate("MainWindow", u"Tolerance", None))
+        self.lblTolerance.setText(QCoreApplication.translate("MainWindow", u"...", None))
     # retranslateUi
 

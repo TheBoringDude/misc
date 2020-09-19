@@ -31,6 +31,10 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         self.lblMinTolerance.setText("{:,}".format(self.func_num(min_tol)) + " Ω (ohms)")
         self.lblMinTolerance.setTextInteractionFlags(QtCore.Qt.TextSelectableByMouse)
 
+        # set the texts
+        self.lblMultiplier.setText(str(color[self.cbMultiplier.currentText()]['multiplier']))
+        self.lblTolerance.setText(str(color[self.cbTolerance.currentText()]['tolerance']) + "%")
+
     def func_num(self, num):
         remainder = num - int(num)
         if remainder != 0:
